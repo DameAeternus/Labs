@@ -1,2 +1,2 @@
-# Labs
+# JavaScript Labs
  
