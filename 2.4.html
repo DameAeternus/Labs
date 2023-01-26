@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            margin-bottom: 15px;
+        }
+    </style>
+
+</head>
+<body>
+<input id="prv" type="text"/> <input id="tret" type="text"/><i>i</i>
+<br>
+<input id="vtor" type="text"/> <input id="cetvrt" type="text"/><i>i</i>
+<br>
+<input type="button" onclick="add()" value="Add"/>
+<br>
+<input id="zbirprv" type="text" disabled value=""> <input id="zbirvtor" disabled type="text" value=""><i>i</i>
+<script>
+    function add()
+    {
+        prv=document.getElementById("prv").value
+        vtor=document.getElementById("vtor").value
+        zbir1=document.getElementById("zbirprv")
+        prv=parseInt(prv);
+        vtor=parseInt(vtor);
+        if (!isNaN(prv)) {
+            if (!isNaN(vtor)) {
+                zbir = prv + vtor;
+                zbir1.value=zbir;
+            }
+        }
+        tret=document.getElementById("tret").value;
+        tret=parseInt(tret)
+        cetvrt=document.getElementById("cetvrt").value;
+        cetvrt=parseInt(cetvrt)
+        zbir2=document.getElementById("zbirvtor");
+        if(!isNaN(tret) || !isNaN(cetvrt))
+        {
+            zbir2.value=tret+cetvrt;
+        }
+    }
+</script>
+</body>
+</html>

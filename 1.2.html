@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Broj</title>
+    <script>
+        x=prompt("Vnesi broj")
+        x=parseInt(x)
+        if(!isNaN(x))
+        {
+            xx=x/1000000
+            xx=parseInt(xx)
+            if(xx=="70" || xx=="71" || xx =="72")
+                console.log("0"+x+" - T-mobile")
+            else if(xx=="75" || xx=="76")
+                console.log("0"+x+" - One")
+            else if(xx=="77" || xx =="78")
+                console.log("0"+x+" - Vip")
+            else
+                console.log("Ne postoi vakov broj")
+        }
+        else
+            alert("Ne e vnesen broj")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

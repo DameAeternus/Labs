@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function changeBackground() {
+            // Get the value of the "value" field
+            var value = document.getElementById("value").value;
+            // Check which radio button is selected
+            var colorRadio = document.getElementById("color");
+            var imageRadio = document.getElementById("image");
+            if (colorRadio.checked) {
+                // Change the background to the specified color
+                document.body.style.background = value;
+            } else if (imageRadio.checked) {
+                // Change the background to the specified image
+                document.body.style.background = 'url(' + value + ')';
+            }
+        }
+    </script>
+</head>
+<body>
+<form>
+    <input type="radio" id="color" name="background" value="color">
+    <label for="color">Color</label><br>
+    <input type="radio" id="image" name="background" value="image">
+    <label for="image">Image</label><br>
+    <label for="value">Value:</label><br>
+    <input type="text" id="value" name="value"><br>
+    <button type="button" onclick="changeBackground()">Change</button>
+</form>
+</body>
+</html>

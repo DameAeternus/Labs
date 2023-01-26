@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>About Me</title>
+    <script>
+        function arial() {
+            var x = document.getElementsByTagName("body")[0]
+            x.style.fontFamily = "arial"
+            d=document.getElementById("red");
+            d.style.background="red";
+        }
+
+    </script>
+</head>
+<body onload="arial()">
+<h1>About Me</h1>
+<ul id="red">
+    <li>Name: <span id="name"></span>
+    <li>Index: <span id="index"></span>
+    <li>Hometown: <span id="hometown"></span>
+</ul>
+<script>
+    var name=document.getElementById("name")
+    var surname=document.getElementById("index");
+    var hometown=document.getElementById("hometown");
+    var ime=prompt("Vnesi ime")
+    var prezime=prompt("Vnesi prezime")
+    var grad=prompt("Vnesi grad")
+    if(ime!=null)
+        name.innerHTML=ime;
+    if(prezime!=null)
+        surname.innerHTML=prezime;
+    if(grad!=null)
+        hometown.innerText=grad;
+</script>
+</body>
+</html>

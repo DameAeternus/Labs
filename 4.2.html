@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function showOptions() {
+           var items = document.getElementById("items").value;
+            var type = document.getElementById("type").value;
+
+            var options = items.split(",");
+            var container = document.createElement("div");
+            for (var i = 0; i < options.length; i++) {
+                var option = document.createElement("input");
+                option.name = "option";
+                option.value = options[i];
+                option.type= type;
+                var label = document.createElement("label");
+                label.innerHTML = options[i];
+                container.appendChild(option);
+                container.appendChild(label);
+
+            }
+            document.body.appendChild(container);
+        }
+    </script>
+</head>
+<body>
+<form>
+    <label for="items">Items:</label><br>
+    <input type="text" id="items" name="items"><br>
+    <label for="type">Type:</label><br>
+    <select id="type" name="type">
+        <option value="radio">Radio Button</option>
+        <option value="checkbox">Check Box</option>
+    </select><br><br>
+    <button type="button" onclick="showOptions()">Show</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        class Cilindar{
+            constructor(radius,height) {
+                this.radius=radius;
+                this.height=height;
+            }
+            volume()
+            {
+                return Math.PI*this.radius*this.radius*this.height;
+            }
+        }
+        var cilindar= new Cilindar(3,2);
+        var volume= cilindar.volume();
+        console.log(volume);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

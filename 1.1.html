@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrom</title>
+    <script>
+        x=prompt("Vnesi broj")
+        x=parseInt(x)
+        if(!isNaN(x))
+        {
+            if(x>99 && x<1000)
+            {
+                s=x/100 // ke vrakja pr 424, 4.24 zatoa mora da se isparsira
+                s=parseInt(s);
+                e=x%10
+                if(s===e)
+                {console.log("Palindrom")}
+                else
+                    console.log("Brojot ne e palindrom")
+            }
+            else
+                alert("Ne moze da se proveri vneseniot broj")
+        }
+        else alert("Ne e broj")
+    </script>
+</head>
+<body>
+</body>
+</html>

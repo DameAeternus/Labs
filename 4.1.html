@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 40%;
+            border: 1px solid black;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<form id="form">
+    <label for="name">Име:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="surname">Презиме:</label><br>
+    <input type="text" id="surname" name="surname"><br>
+    <label for="index">Индекс:</label><br>
+    <input type="text" id="index" name="index"><br>
+    <label for="predmet">Предмет:</label><br>
+    <input type="text" id="predmet" name="predmet"><br>
+    <label for="select">Оцена:</label><br>
+    <select id="select">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select><br><br>
+
+</form>
+<input type="submit" onclick="vnesi()"/>
+<table id="table">
+    <tr>
+        <th>Поле 1</th>
+        <th>Поле 2</th>
+        <th>Поле 3</th>
+        <th>Поле 4</th>
+        <th>Оцена</th>
+    </tr>
+</table>
+<script>
+    var records=[];
+    function vnesi()
+    {
+        var name= document.getElementById("name");
+        name=name.value;
+        var surname=document.getElementById("surname");
+        surname=surname.value;
+        var index=document.getElementById("index");
+        index=index.value;
+        var predmet=document.getElementById("predmet");
+        predmet=predmet.value;
+        var ocena=document.getElementById("select");
+        ocena=ocena.value;
+        records.push({name, surname, index , predmet, ocena});
+        if (name === "" || name === undefined || surname === null || surname === undefined || index === null || index === undefined || predmet === null || predmet === undefined) {
+            alert("Popolni gi site polinja!")
+        }
+        var tabela=document.getElementById("table");
+        var row = tabela.insertRow();
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        cell1.innerHTML = name;
+        cell2.innerHTML = surname;
+        cell3.innerHTML = index;
+        cell4.innerHTML = predmet;
+        cell5.innerHTML = ocena;
+        if(ocena==="5")
+            row.style.backgroundColor="red";
+        document.getElementById("form").reset();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function remove_array_element(list,element)
+        { // vrakja true ako e!=element
+            var newList=list.filter(e=>e!=element)
+            // e da e razlicno od element ke se filtrira u novu listu
+            // sporedba primer evennumbers=number.filter(n=>n%2==0)
+            return newList;
+
+        }
+        console.log(remove_array_element([2, 5, 9, 6], 5));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

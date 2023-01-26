@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function randomslika()
+        {
+            var x=document.getElementById("random");
+            var n=Math.floor(Math.random()*3);
+            if(n==1)
+            {
+                x.src="http://data.whicdn.com/images/15145864/large.jpg"
+            }
+            if(n==2)
+            {
+                x.src="https://cdn0.vox-cdn.com/uploads/chorus_image/image/48151611/8559004265_4b81d299ce.0.0.jpg"
+            }
+            else x.src="https://farm5.staticflickr.com/4060/4567292488_5d3f4b05f6_z.jpg"
+
+        }
+    </script>
+</head>
+<body>
+<input type="button" onclick="randomslika()" value="Random slika">
+<img id="random" src="#"/>
+</body>
+</html>

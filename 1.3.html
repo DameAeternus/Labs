@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String</title>
+    <script>
+        x=prompt("Vnesi string")
+        function najdolgzbor(x){
+            zbor=x.split(" ")
+            max=0;
+            max_zbor=null;
+            for(i=0;i<zbor.length;i++) { // primer dame najjak zbor.length=2,
+                // a zbor[0] ke bide 4 zbor[1] ke bide 6.
+                if (zbor[i].length > max) {
+                    max = zbor[i].length;
+                    max_zbor = zbor[i];
+                }
+            }
+            return max_zbor;
+        }
+        console.log(najdolgzbor(x))
+    </script>
+</head>
+<body>
+
+</body>
+</html>
